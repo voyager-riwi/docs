@@ -1,0 +1,81 @@
+[debug] [2025-09-12T23:13:19.965Z] ----------------------------------------------------------------------
+[debug] [2025-09-12T23:13:19.969Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-09-12T23:13:19.969Z] CLI Version:   14.8.0
+[debug] [2025-09-12T23:13:19.969Z] Platform:      win32
+[debug] [2025-09-12T23:13:19.969Z] Node Version:  v22.16.0
+[debug] [2025-09-12T23:13:19.970Z] Time:          Fri Sep 12 2025 18:13:19 GMT-0500 (hora estándar de Colombia)
+[debug] [2025-09-12T23:13:19.970Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-09-12T23:13:19.973Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2025-09-12T23:13:20.307Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-12T23:13:20.307Z] > authorizing via signed-in user (diego.zuluagaye@amigo.edu.co)
+[debug] [2025-09-12T23:13:20.307Z] [iam] checking project voyager-riwi-51c89 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-09-12T23:13:20.308Z] Checked if tokens are valid: false, expires at: 1750468110212
+[debug] [2025-09-12T23:13:20.308Z] Checked if tokens are valid: false, expires at: 1750468110212
+[debug] [2025-09-12T23:13:20.309Z] > refreshing access token with scopes: []
+[debug] [2025-09-12T23:13:20.310Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-12T23:13:20.310Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-12T23:13:20.627Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2025-09-12T23:13:20.628Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2025-09-12T23:13:20.648Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-12T23:13:20.648Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-12T23:13:20.657Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions [none]
+[debug] [2025-09-12T23:13:20.657Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions x-goog-quota-user=projects/voyager-riwi-51c89
+[debug] [2025-09-12T23:13:20.657Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-09-12T23:13:21.554Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions 200
+[debug] [2025-09-12T23:13:21.554Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions {}
+[debug] [2025-09-12T23:13:21.554Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project voyager-riwi-51c89:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2025-09-12T23:13:21.556Z] Checked if tokens are valid: true, expires at: 1757722399648
+[debug] [2025-09-12T23:13:21.556Z] Checked if tokens are valid: true, expires at: 1757722399648
+[debug] [2025-09-12T23:13:21.557Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 [none]
+[debug] [2025-09-12T23:13:22.246Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 403
+[debug] [2025-09-12T23:13:22.246Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-09-12T23:13:22.247Z] Request to https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 had HTTP Error: 403, The caller does not have permission
+[debug] [2025-09-12T23:13:22.432Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project voyager-riwi-51c89. Please make sure the project exists and your account has permission to access it.
+[debug] [2025-09-13T02:05:52.741Z] ----------------------------------------------------------------------
+[debug] [2025-09-13T02:05:52.747Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2025-09-13T02:05:52.748Z] CLI Version:   14.8.0
+[debug] [2025-09-13T02:05:52.748Z] Platform:      win32
+[debug] [2025-09-13T02:05:52.748Z] Node Version:  v22.16.0
+[debug] [2025-09-13T02:05:52.749Z] Time:          Fri Sep 12 2025 21:05:52 GMT-0500 (hora estándar de Colombia)
+[debug] [2025-09-13T02:05:52.749Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-09-13T02:05:52.989Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-09-13T02:05:52.989Z] > authorizing via signed-in user (diego.zuluagaye@amigo.edu.co)
+[debug] [2025-09-13T02:05:52.990Z] [iam] checking project voyager-riwi-51c89 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-09-13T02:05:52.991Z] Checked if tokens are valid: false, expires at: 1757722399648
+[debug] [2025-09-13T02:05:52.991Z] Checked if tokens are valid: false, expires at: 1757722399648
+[debug] [2025-09-13T02:05:52.991Z] > refreshing access token with scopes: []
+[debug] [2025-09-13T02:05:52.993Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-09-13T02:05:52.993Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-13T02:05:53.286Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-09-13T02:05:53.286Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-09-13T02:05:53.295Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions [none]
+[debug] [2025-09-13T02:05:53.295Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions x-goog-quota-user=projects/voyager-riwi-51c89
+[debug] [2025-09-13T02:05:53.295Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-09-13T02:05:54.043Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions 200
+[debug] [2025-09-13T02:05:54.043Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/voyager-riwi-51c89:testIamPermissions {}
+[debug] [2025-09-13T02:05:54.044Z] [iam] error while checking permissions, command may fail: Authorization failed. This account is missing the following required permissions on project voyager-riwi-51c89:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2025-09-13T02:05:54.044Z] Checked if tokens are valid: true, expires at: 1757732752286
+[debug] [2025-09-13T02:05:54.044Z] Checked if tokens are valid: true, expires at: 1757732752286
+[debug] [2025-09-13T02:05:54.044Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 [none]
+[debug] [2025-09-13T02:05:54.540Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 403
+[debug] [2025-09-13T02:05:54.541Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2025-09-13T02:05:54.542Z] Request to https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 had HTTP Error: 403, The caller does not have permission
+[debug] [2025-09-13T02:05:54.847Z] FirebaseError: Request to https://firebase.googleapis.com/v1beta1/projects/voyager-riwi-51c89 had HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:52:12)
+    at RetryOperation._fn (C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:312:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[error] 
+[error] Error: Failed to get Firebase project voyager-riwi-51c89. Please make sure the project exists and your account has permission to access it.
