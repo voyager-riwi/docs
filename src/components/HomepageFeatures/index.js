@@ -17,14 +17,15 @@ const FeatureList = [
       buttonLink: '/docs/Console Library System',
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Concert and Ticket Management System',
+    Svg: require('@site/static/img/concert_ticket_management.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+          RiwiMusic is a console application developed in C# with .NET 8.0 that provides a complete management system for concerts, clients, and ticket sales. The application allows managing musical events, maintaining a client database, and processing ticket sales transactions with advanced query and reporting functionalities.
       </>
     ),
+      buttonText: 'Read More',
+      buttonLink: '/docs/Console-RiwiMusic/RiwiMusic-Team1',
   },
   {
     title: 'Powered by React',
