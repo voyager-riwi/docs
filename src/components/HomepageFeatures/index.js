@@ -28,14 +28,15 @@ const FeatureList = [
       buttonLink: '/docs/Console-RiwiMusic/RiwiMusic-Team1',
   },
   {
-    title: 'Powered by React',
+    title: 'User management system',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The User Management application is a console-based system developed with C# and .NET 8.0, designed to efficiently manage user information in a MySQL database through Entity Framework Core. It enables registering, querying, updating, and deleting users, while leveraging LINQ for flexible data queries and following a layered architecture that ensures scalability and maintainability.
       </>
     ),
+      buttonText: 'Read More',
+      buttonLink: '/docs/Console-creation_users/User Creation and Management',
   },
 ];
 
